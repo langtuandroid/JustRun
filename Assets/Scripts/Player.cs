@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public Material material;
     public Animator myAnimator;
 
+    [SerializeField] AudioClip _Clip;
 
 
     void Start()
@@ -49,7 +50,7 @@ void Update()
             boosting = true;
             MovemntSpeed = 25;
             CoinText.coinAmount -= 10;
-
+            SoundManager.Instance.PlaySound(_Clip);
             Destroy(other.gameObject);
             
         }

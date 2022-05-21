@@ -9,6 +9,8 @@ public class Finish : MonoBehaviour
     public GameObject next;
     public Animator myAnimator;
     public Animator kartAnimator;
+
+    [SerializeField] AudioClip _Clip;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "player")
@@ -19,7 +21,9 @@ public class Finish : MonoBehaviour
             Time.timeScale = 0;
             myAnimator.SetBool("otobüs", true);
             kartAnimator.enabled = true;
+            SoundManager.Instance.PlaySound(_Clip);
         }
+
         
     }
 }
