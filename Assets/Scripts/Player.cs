@@ -17,8 +17,11 @@ public class Player : MonoBehaviour
 
     [SerializeField] AudioClip _Clip;
 
+    [SerializeField] ParticleSystem particle;
+
     void Start()
     {
+        particle.Stop();
         MovemntSpeed = 10;
         boostTimer = 0;
         boosting = false;
@@ -45,6 +48,8 @@ void Update()
     {
         if(other.tag == "apple")
         {
+            particle.transform.position = gameObject.transform.position;
+            particle.Play();
             boosting = true;
             MovemntSpeed = 25;
             CoinText.coinAmount -= 10;

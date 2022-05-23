@@ -9,10 +9,18 @@ public class Tshirt : MonoBehaviour
     public Material material;
     public Material material2;
 
+    [SerializeField] ParticleSystem particle;
+
+    private void Start()
+    {
+        particle.Stop();
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "player")
         {
+            particle.transform.position = gameObject.transform.position;
+            particle.Play();
             Destroy(gameObject);
             CoinText.coinAmount -= 15;
             SoundManager.Instance.PlaySound(_Clip);
