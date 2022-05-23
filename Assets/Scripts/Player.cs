@@ -17,14 +17,12 @@ public class Player : MonoBehaviour
 
     [SerializeField] AudioClip _Clip;
 
-
     void Start()
     {
         MovemntSpeed = 10;
         boostTimer = 0;
         boosting = false;
         material.color = Color.red;
-
 }
 
 void Update()
@@ -51,8 +49,7 @@ void Update()
             MovemntSpeed = 25;
             CoinText.coinAmount -= 10;
             SoundManager.Instance.PlaySound(_Clip);
-            Destroy(other.gameObject);
-            
+            Destroy(other.gameObject);    
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -60,8 +57,7 @@ void Update()
         if (collision.gameObject.tag == "finish")
         {
             myAnimator.SetBool("Run",  false);
-            myAnimator.SetBool("Idle", true);
-            
+            myAnimator.SetBool("Idle", true);        
         }
     }
 

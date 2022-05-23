@@ -7,6 +7,9 @@ public class coin : MonoBehaviour
     [SerializeField] AudioClip _Clip;
     [SerializeField] ParticleSystem Particle;
 
+    [SerializeField] GameObject GoldPref;
+    [SerializeField] GameObject Panel;
+    [SerializeField] Rigidbody rgb;
     public void Start()
     {
         Particle.Stop();
@@ -19,7 +22,8 @@ public class coin : MonoBehaviour
             Particle.Play();
             Destroy(gameObject);
             CoinText.coinAmount += 5;
-            SoundManager.Instance.PlaySound(_Clip);       
+            SoundManager.Instance.PlaySound(_Clip);
+            Instantiate(GoldPref, Camera.main.WorldToScreenPoint(transform.position), Panel.transform.rotation, Panel.transform);
         }
     }
 }

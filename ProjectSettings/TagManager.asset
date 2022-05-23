@@ -12,6 +12,9 @@ TagManager:
   - otobus
   - otobusnext
   - otobusfinish
+  - FxTemporaire
+  - GoldUI
+  - GoldPanel
   layers:
   - Default
   - TransparentFX
