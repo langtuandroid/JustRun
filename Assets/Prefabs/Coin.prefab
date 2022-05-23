@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Clip: {fileID: 8300000, guid: 5607cf7bedd56264c82987c339cdf41e, type: 3}
+  Particle: {fileID: 8853802319440318620, guid: c01d6a06311c6684f9afd784d7837290, type: 3}
 --- !u!64 &755667325418650289
 MeshCollider:
   m_ObjectHideFlags: 0

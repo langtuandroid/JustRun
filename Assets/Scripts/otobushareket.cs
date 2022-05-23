@@ -9,10 +9,15 @@ public class otobushareket : MonoBehaviour
 
     float hor;
 
+    [SerializeField] ParticleSystem particle;
+
+    [SerializeField] AudioClip _Clip;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        particle.Play();
+        SoundManager.Instance.PlaySound(_Clip);
     }
 
     // Update is called once per frame
