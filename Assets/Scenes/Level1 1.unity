@@ -9342,6 +9342,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zemin
       objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323118, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Size.x
+      value: 67.4345
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323118, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Size.y
+      value: 53.63371
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323118, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Center.x
+      value: -38.25919
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323118, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Center.y
+      value: 26.316854
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323119, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Size.x
+      value: 51.608273
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323119, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Size.y
+      value: 46.50034
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323119, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Center.x
+      value: 30.465395
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323119, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Center.y
+      value: 22.75017
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab805dc5af708984f825e9500ec58023, type: 3}
 --- !u!1001 &7427324091281974429

@@ -6598,6 +6598,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zemin
       objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323118, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Size.x
+      value: 25.866425
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323118, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Size.y
+      value: 23.64943
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323118, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Center.x
+      value: -17.475147
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323118, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Center.y
+      value: 11.324715
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323119, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Size.x
+      value: 36.579407
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323119, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Size.y
+      value: 27.55016
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323119, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Center.x
+      value: 22.950958
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987065740298323119, guid: ab805dc5af708984f825e9500ec58023, type: 3}
+      propertyPath: m_Center.y
+      value: 13.275082
+      objectReference: {fileID: 0}
     - target: {fileID: 6987065740409193442, guid: ab805dc5af708984f825e9500ec58023, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
