@@ -4,14 +4,35 @@ using UnityEngine;
 
 public class move : MonoBehaviour
 {
-    [SerializeField] float MovemntSpeed;
-    float hor;
+    private float MovemntSpeed;
+    private float hor;
 
+    public float xSpeed;
+    public float _currentRunningSpeed;
+    public float limitX;
 
 
     void Update()
     {
-        hor = Input.GetAxis("Horizontal");
-        transform.Translate(new Vector3(hor * Time.deltaTime, 0, MovemntSpeed * Time.deltaTime));
+        float newX = 0;
+        float touchXDelta = 0;
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+        {
+            touchXDelta = Input.GetTouch(0).deltaPosition.x / Screen.width;
+        }
+        else if (Input.GetMouseButton(0))
+        {
+            touchXDelta = Input.GetAxis("Mouse X");
+        }
+
+        newX = transform.position.x + xSpeed * touchXDelta * Time.deltaTime;
+        newX = Mathf.Clamp(newX, -limitX, limitX);
+
+        Vector3 newPosition = new Vector3(newX, transform.position.y, transform.position.z + _currentRunningSpeed * Time.deltaTime);
+        transform.position = newPosition;
+    }
+    public void ChangeSpeed(float value)
+    {
+        _currentRunningSpeed = value;
     }
 }

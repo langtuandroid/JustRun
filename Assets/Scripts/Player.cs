@@ -9,9 +9,11 @@ public class Player : MonoBehaviour
     
     public float MovemntSpeed;
     public float HorSpeed;
+    public float hor;
+
     public float boostTimer;
     public bool boosting;
-    float hor;
+
     public Material material;
     public Animator myAnimator;
 
@@ -19,30 +21,53 @@ public class Player : MonoBehaviour
 
     [SerializeField] ParticleSystem particle;
 
+    public float xSpeed;
+    public float _currentRunningSpeed;
+    public float limitX;
+
+
     void Start()
     {
         particle.Stop();
-        MovemntSpeed = 10;
+        _currentRunningSpeed = 14;
         boostTimer = 0;
         boosting = false;
         material.color = Color.red;
 }
 
-void Update()
-    {
-        hor = Input.GetAxis("Horizontal");
-        transform.Translate(new Vector3(hor * HorSpeed, 0, MovemntSpeed * Time.deltaTime));
-
-        if (boosting == true)
+    void Update()
+{
+        float newX = 0;
+        float touchXDelta = 0;
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
         {
-            boostTimer += Time.deltaTime;
-            if (boostTimer >= 1.7f)
-            {
-                MovemntSpeed = 10;
-                boostTimer = 0;
-                boosting = false;
-            }
+            touchXDelta = Input.GetTouch(0).deltaPosition.x / Screen.width;
         }
+        else if (Input.GetMouseButton(0))
+        {
+            touchXDelta = Input.GetAxis("Mouse X");
+        }
+                
+        newX = transform.position.x + xSpeed * touchXDelta * Time.deltaTime;         
+        newX = Mathf.Clamp(newX, -limitX, limitX);     
+        
+        Vector3 newPosition = new Vector3(newX, transform.position.y, transform.position.z + _currentRunningSpeed * Time.deltaTime);           
+        transform.position = newPosition;
+
+            if (boosting == true)
+            {
+                boostTimer += Time.deltaTime;
+                if (boostTimer >= 1.7f)
+                {
+                    _currentRunningSpeed = 14;
+                    boostTimer = 0;
+                    boosting = false;
+                }
+           }
+}
+    public void ChangeSpeed(float value)
+    {
+        _currentRunningSpeed = value;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -51,7 +76,7 @@ void Update()
             particle.transform.position = gameObject.transform.position;
             particle.Play();
             boosting = true;
-            MovemntSpeed = 25;
+            _currentRunningSpeed = 24;
             CoinText.coinAmount -= 10;
             SoundManager.Instance.PlaySound(_Clip);
             Destroy(other.gameObject);    
@@ -65,5 +90,4 @@ void Update()
             myAnimator.SetBool("Idle", true);        
         }
     }
-
 }

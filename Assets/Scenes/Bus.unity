@@ -1974,10 +1974,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c8fa95d038d73a44bc676e2244471b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovemntSpeed: 12
-  HorSpeed: 0.1
   particle: {fileID: 73210525}
   _Clip: {fileID: 8300000, guid: dced3a3563472a24aa0ea47b86f38ef8, type: 3}
+  xSpeed: 8
+  _currentRunningSpeed: 14
+  limitX: 10
 --- !u!65 &1336348666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2791,6 +2792,10 @@ PrefabInstance:
     - target: {fileID: 5492447975620634663, guid: 5ef0257b3e08f8b4bb413e2e99e637f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633470265022675874, guid: 5ef0257b3e08f8b4bb413e2e99e637f3, type: 3}
+      propertyPath: m_Text
+      value: 2. BOLUM
       objectReference: {fileID: 0}
     - target: {fileID: 8339392151173964551, guid: 5ef0257b3e08f8b4bb413e2e99e637f3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

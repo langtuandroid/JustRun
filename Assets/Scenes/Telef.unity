@@ -947,9 +947,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3930401299155268934, guid: 5ef0257b3e08f8b4bb413e2e99e637f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5492447975620634663, guid: 5ef0257b3e08f8b4bb413e2e99e637f3, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633470265022675874, guid: 5ef0257b3e08f8b4bb413e2e99e637f3, type: 3}
+      propertyPath: m_Text
+      value: 3. BOLUM
       objectReference: {fileID: 0}
     - target: {fileID: 6690033673503610453, guid: 5ef0257b3e08f8b4bb413e2e99e637f3, type: 3}
       propertyPath: m_IsActive
@@ -1865,7 +1873,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b5aba3a54e15a46b80cfd2ffaa30b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovemntSpeed: 10
+  xSpeed: 8
+  _currentRunningSpeed: 14
+  limitX: 10
 --- !u!4 &1547731340
 Transform:
   m_ObjectHideFlags: 0

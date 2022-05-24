@@ -4,26 +4,44 @@ using UnityEngine;
 
 public class otobushareket : MonoBehaviour
 {
-    public float MovemntSpeed;
-    public float HorSpeed;
-
-    float hor;
+    private float MovemntSpeed;
+    private float HorSpeed;
+    private float hor;
 
     [SerializeField] ParticleSystem particle;
 
     [SerializeField] AudioClip _Clip;
 
-    // Start is called before the first frame update
+    public float xSpeed;
+    public float _currentRunningSpeed;
+    public float limitX;
+
     void Start()
     {
         particle.Play();
         SoundManager.Instance.PlaySound(_Clip);
     }
-
-    // Update is called once per frame
     void Update()
     {
-        hor = Input.GetAxis("Horizontal");
-        transform.Translate(new Vector3(-1 * hor * HorSpeed, 0, -1 * MovemntSpeed * Time.deltaTime));
+        float newX = 0;
+        float touchXDelta = 0;
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+        {
+            touchXDelta = Input.GetTouch(0).deltaPosition.x / Screen.width;
+        }
+        else if (Input.GetMouseButton(0))
+        {
+            touchXDelta = Input.GetAxis("Mouse X");
+        }
+
+        newX = transform.position.x + xSpeed * touchXDelta * Time.deltaTime;
+        newX = Mathf.Clamp(newX, -limitX, limitX);
+
+        Vector3 newPosition = new Vector3(newX, transform.position.y, transform.position.z + _currentRunningSpeed * Time.deltaTime);
+        transform.position = newPosition;
+    }
+    public void ChangeSpeed(float value)
+    {
+        _currentRunningSpeed = value;
     }
 }
