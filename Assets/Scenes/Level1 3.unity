@@ -3511,7 +3511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633470265022675874, guid: 5ef0257b3e08f8b4bb413e2e99e637f3, type: 3}
       propertyPath: m_Text
-      value: 
+      value: "YEN\u0130DEN BASLA"
       objectReference: {fileID: 0}
     - target: {fileID: 9073992497088052588, guid: 5ef0257b3e08f8b4bb413e2e99e637f3, type: 3}
       propertyPath: m_Name
