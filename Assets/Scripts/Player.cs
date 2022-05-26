@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         particle.Stop();
-        _currentRunningSpeed = 14;
+        _currentRunningSpeed = 11;
         boostTimer = 0;
         boosting = false;
         material.color = Color.red;
@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
             particle.transform.position = gameObject.transform.position;
             particle.Play();
             boosting = true;
-            _currentRunningSpeed = 24;
+            _currentRunningSpeed = 20;
             CoinText.coinAmount -= 10;
             SoundManager.Instance.PlaySound(_Clip);
             Destroy(other.gameObject);    
