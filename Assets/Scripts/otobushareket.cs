@@ -18,6 +18,7 @@ public class otobushareket : MonoBehaviour
 
     void Start()
     {
+        Screen.SetResolution(Screen.currentResolution.width / 2, Screen.currentResolution.height / 2, true);
         particle.Play();
         SoundManager.Instance.PlaySound(_Clip);
     }

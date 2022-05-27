@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        Screen.SetResolution(Screen.currentResolution.width / 2, Screen.currentResolution.height / 2 , true);
         particle.Stop();
         _currentRunningSpeed = 11;
         boostTimer = 0;

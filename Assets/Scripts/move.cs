@@ -11,6 +11,10 @@ public class move : MonoBehaviour
     public float _currentRunningSpeed;
     public float limitX;
 
+    public void Start()
+    {
+       Screen.SetResolution(Screen.currentResolution.width / 2, Screen.currentResolution.height / 2, true);
+    }
 
     void Update()
     {
