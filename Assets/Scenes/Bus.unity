@@ -1252,7 +1252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f5af82d432d25d4fbe1f603f49b03ae, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f5af82d432d25d4fbe1f603f49b03ae, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1260,7 +1260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f5af82d432d25d4fbe1f603f49b03ae, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f5af82d432d25d4fbe1f603f49b03ae, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1272,7 +1272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f5af82d432d25d4fbe1f603f49b03ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f5af82d432d25d4fbe1f603f49b03ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1976,9 +1976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle: {fileID: 73210525}
   _Clip: {fileID: 8300000, guid: dced3a3563472a24aa0ea47b86f38ef8, type: 3}
-  xSpeed: 8
-  _currentRunningSpeed: 14
-  limitX: 10
+  Rigidbody: {fileID: 1336348667}
 --- !u!65 &1336348666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2006,7 +2004,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!4 &1336348668 stripped
 Transform:

@@ -5972,6 +5972,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1312397841}
     - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
+      propertyPath: Rigidbody
+      value: 
+      objectReference: {fileID: 919132148916314717}
+    - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
       propertyPath: myAnimator
       value: 
       objectReference: {fileID: 1755424745}

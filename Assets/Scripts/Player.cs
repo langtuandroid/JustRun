@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     
-    public float MovemntSpeed;
-    public float HorSpeed;
-    public float hor;
+    private float MovemntSpeed;
+    private float HorSpeed;
+    private float hor;
 
     public float boostTimer;
     public bool boosting;
@@ -21,11 +21,14 @@ public class Player : MonoBehaviour
 
     [SerializeField] ParticleSystem particle;
 
-    public float xSpeed;
-    public float _currentRunningSpeed;
-    public float limitX;
+    private float xSpeed;
+    private float _currentRunningSpeed;
+    private float limitX;
 
-
+    public Rigidbody Rigidbody;
+    bool sag;
+    bool sol;
+    float speed = 14f;
     void Start()
     {
         Screen.SetResolution(Screen.currentResolution.width / 2, Screen.currentResolution.height / 2 , true);
@@ -38,6 +41,36 @@ public class Player : MonoBehaviour
 
     void Update()
 {
+        transform.Translate(0, 0, speed * Time.deltaTime);
+
+        Vector3 sag_git = new Vector3(3.80f, transform.position.y, transform.position.z);
+        Vector3 sol_git = new Vector3(-3.80f, transform.position.y, transform.position.z);
+
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            if(touch.deltaPosition.x  > 50f)
+            {
+                sag = true;
+                sol = false;
+            }
+            if (touch.deltaPosition.x < -50f)
+            {
+                sag = false;
+                sol = true;
+            }
+            if(sag == true)
+            {
+                transform.position = Vector3.Lerp(transform.position, sag_git, 4f * Time.deltaTime);
+            }
+            if (sol == true)
+            {
+                transform.position = Vector3.Lerp(transform.position, sol_git, 4f * Time.deltaTime);
+            }
+        }
+
+        /*
         float newX = 0;
         float touchXDelta = 0;
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
@@ -54,13 +87,14 @@ public class Player : MonoBehaviour
         
         Vector3 newPosition = new Vector3(newX, transform.position.y, transform.position.z + _currentRunningSpeed * Time.deltaTime);           
         transform.position = newPosition;
+        */
 
             if (boosting == true)
             {
                 boostTimer += Time.deltaTime;
                 if (boostTimer >= 1.7f)
                 {
-                    _currentRunningSpeed = 14;
+                    speed = 14;
                     boostTimer = 0;
                     boosting = false;
                 }
@@ -77,7 +111,7 @@ public class Player : MonoBehaviour
             particle.transform.position = gameObject.transform.position;
             particle.Play();
             boosting = true;
-            _currentRunningSpeed = 20;
+            speed = 20;
             CoinText.coinAmount -= 10;
             SoundManager.Instance.PlaySound(_Clip);
             Destroy(other.gameObject);    

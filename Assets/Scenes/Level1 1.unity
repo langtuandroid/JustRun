@@ -9088,6 +9088,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1651791579033299478, guid: 2dc55d7e09ca46340852e366247c65ae, type: 3}
     - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
+      propertyPath: fp.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
+      propertyPath: fp.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
+      propertyPath: lp.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
+      propertyPath: lp.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
       propertyPath: Panel
       value: 
       objectReference: {fileID: 902522062}
@@ -9095,6 +9111,10 @@ PrefabInstance:
       propertyPath: _Clip
       value: 
       objectReference: {fileID: 8300000, guid: a0aa858a84348fc43b5fe0b0506a18d2, type: 3}
+    - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
+      propertyPath: speed
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
       propertyPath: limitX
       value: 10
@@ -9120,12 +9140,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 33130941}
     - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
+      propertyPath: Rigidbody
+      value: 
+      objectReference: {fileID: 919132148916314717}
+    - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
       propertyPath: myAnimator
       value: 
       objectReference: {fileID: 1755424745}
     - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
       propertyPath: MovemntSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
+      propertyPath: dragDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
+      propertyPath: sagaSolaSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
       propertyPath: _currentRunningSpeed
@@ -9141,11 +9173,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4325227799578982516, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4325227799578982516, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4325227799578982516, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
       propertyPath: m_LocalRotation.w
