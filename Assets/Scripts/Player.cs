@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
     float speed = 14f;
     void Start()
     {
-        Screen.SetResolution(Screen.currentResolution.width / 2, Screen.currentResolution.height / 2 , true);
         particle.Stop();
         _currentRunningSpeed = 11;
         boostTimer = 0;
@@ -42,7 +41,6 @@ public class Player : MonoBehaviour
     void Update()
 {
         transform.Translate(0, 0, speed * Time.deltaTime);
-
         Vector3 sag_git = new Vector3(3.80f, transform.position.y, transform.position.z);
         Vector3 sol_git = new Vector3(-3.80f, transform.position.y, transform.position.z);
 
