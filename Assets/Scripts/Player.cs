@@ -6,11 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    
-    private float MovemntSpeed;
-    private float HorSpeed;
-    private float hor;
-
     public float boostTimer;
     public bool boosting;
 
@@ -21,54 +16,20 @@ public class Player : MonoBehaviour
 
     [SerializeField] ParticleSystem particle;
 
-    private float xSpeed;
-    private float _currentRunningSpeed;
-    private float limitX;
+    public float _currentRunningSpeed;
+    public float xSpeed;
+    public float limitX;
 
-    public Rigidbody Rigidbody;
-    bool sag;
-    bool sol;
-    float speed = 14f;
     void Start()
     {
+        _currentRunningSpeed = 10f;
         particle.Stop();
-        _currentRunningSpeed = 11;
         boostTimer = 0;
         boosting = false;
         material.color = Color.red;
 }
-
     void Update()
-{
-        transform.Translate(0, 0, speed * Time.deltaTime);
-        Vector3 sag_git = new Vector3(3.80f, transform.position.y, transform.position.z);
-        Vector3 sol_git = new Vector3(-3.80f, transform.position.y, transform.position.z);
-
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-
-            if(touch.deltaPosition.x  > 50f)
-            {
-                sag = true;
-                sol = false;
-            }
-            if (touch.deltaPosition.x < -50f)
-            {
-                sag = false;
-                sol = true;
-            }
-            if(sag == true)
-            {
-                transform.position = Vector3.Lerp(transform.position, sag_git, 4f * Time.deltaTime);
-            }
-            if (sol == true)
-            {
-                transform.position = Vector3.Lerp(transform.position, sol_git, 4f * Time.deltaTime);
-            }
-        }
-
-        /*
+{     
         float newX = 0;
         float touchXDelta = 0;
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
@@ -79,20 +40,19 @@ public class Player : MonoBehaviour
         {
             touchXDelta = Input.GetAxis("Mouse X");
         }
-                
+        
         newX = transform.position.x + xSpeed * touchXDelta * Time.deltaTime;         
         newX = Mathf.Clamp(newX, -limitX, limitX);     
         
         Vector3 newPosition = new Vector3(newX, transform.position.y, transform.position.z + _currentRunningSpeed * Time.deltaTime);           
         transform.position = newPosition;
-        */
 
-            if (boosting == true)
+        if (boosting == true)
             {
                 boostTimer += Time.deltaTime;
                 if (boostTimer >= 1.7f)
                 {
-                    speed = 14;
+                    _currentRunningSpeed = 10f;
                     boostTimer = 0;
                     boosting = false;
                 }
@@ -109,7 +69,7 @@ public class Player : MonoBehaviour
             particle.transform.position = gameObject.transform.position;
             particle.Play();
             boosting = true;
-            speed = 20;
+            _currentRunningSpeed = 20f;
             CoinText.coinAmount -= 10;
             SoundManager.Instance.PlaySound(_Clip);
             Destroy(other.gameObject);    

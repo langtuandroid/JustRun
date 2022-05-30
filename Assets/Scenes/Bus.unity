@@ -915,7 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca1bd3839b5913a4cbfffea04bd8f232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myAnimator: {fileID: 1336348669}
+  myAnimator: {fileID: 0}
   playbutton: {fileID: 544069382}
   pausebutton: {fileID: 902687781}
   resumebutton: {fileID: 1714626613}
@@ -1976,7 +1976,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle: {fileID: 73210525}
   _Clip: {fileID: 8300000, guid: dced3a3563472a24aa0ea47b86f38ef8, type: 3}
-  Rigidbody: {fileID: 1336348667}
+  _currentRunningSpeed: 10
+  xSpeed: 160
+  limitX: 3.5
 --- !u!65 &1336348666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2021,7 +2023,7 @@ Animator:
   m_GameObject: {fileID: 1336348664}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 72a56fb3e261c8049ae7e970a22e5f71, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

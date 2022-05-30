@@ -5985,11 +5985,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: a0aa858a84348fc43b5fe0b0506a18d2, type: 3}
     - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
       propertyPath: limitX
-      value: 10
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
       propertyPath: xSpeed
-      value: 8
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
       propertyPath: HorSpeed
@@ -6017,7 +6017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4291071424066561918, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
       propertyPath: _currentRunningSpeed
-      value: 14
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4325227799578982516, guid: 86ebdd3b9d0763c4da0e57b500552da6, type: 3}
       propertyPath: m_RootOrder
