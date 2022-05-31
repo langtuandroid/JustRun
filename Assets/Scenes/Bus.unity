@@ -896,6 +896,7 @@ GameObject:
   m_Component:
   - component: {fileID: 505717979}
   - component: {fileID: 505717978}
+  - component: {fileID: 505717980}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -915,7 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca1bd3839b5913a4cbfffea04bd8f232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myAnimator: {fileID: 0}
+  myAnimator: {fileID: 505717980}
   playbutton: {fileID: 544069382}
   pausebutton: {fileID: 902687781}
   resumebutton: {fileID: 1714626613}
@@ -935,8 +936,27 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &505717980
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505717977}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &513186035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1977,7 +1997,7 @@ MonoBehaviour:
   particle: {fileID: 73210525}
   _Clip: {fileID: 8300000, guid: dced3a3563472a24aa0ea47b86f38ef8, type: 3}
   _currentRunningSpeed: 10
-  xSpeed: 160
+  xSpeed: 170
   limitX: 3.5
 --- !u!65 &1336348666
 BoxCollider:
@@ -2535,7 +2555,7 @@ GameObject:
   - component: {fileID: 2040918085}
   - component: {fileID: 2040918084}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: FinisLine
   m_TagString: otobusfinish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2624,11 +2644,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040918083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8834, y: -0.66, z: 97.53}
+  m_LocalPosition: {x: 0.8834, y: -0.66, z: 106.75}
   m_LocalScale: {x: 10.289794, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2058796230
 PrefabInstance:
