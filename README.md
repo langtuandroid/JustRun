@@ -1,8 +1,8 @@
 # JustRun
 
-[![1.png](https://i.postimg.cc/G2Js0LYb/1.png)](https://postimg.cc/phrdztqS)     
+![run1](https://user-images.githubusercontent.com/48593494/200681919-334c7160-52ed-45b4-afe2-c8b0de600c6e.png)
 
-
+![run2](https://user-images.githubusercontent.com/48593494/200681929-5e9eae70-3ccb-42ed-b501-eab324179760.png)
 
 
 
